@@ -10,3 +10,37 @@
 
 // VIẾT CODE Ở ĐÂY
 
+#include <stdio.h>
+
+int main() {
+    int n, i;
+    int arr[100];
+    int max, min;
+
+    printf("Nhap n: ");
+    scanf("%d", &n);
+
+    // nhập mảng
+    for(i = 0; i < n; i++){
+        scanf("%d", &arr[i]);
+    }
+
+    // giả sử phần tử đầu là max và min
+    max = arr[0];
+    min = arr[0];
+
+    // tìm max và min
+    for(i = 1; i < n; i++){
+        if(arr[i] > max){
+            max = arr[i];
+        }
+        if(arr[i] < min){
+            min = arr[i];
+        }
+    }
+
+    printf("Max = %d\n", max);
+    printf("Min = %d\n", min);
+
+    return 0;
+}

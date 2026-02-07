@@ -11,3 +11,38 @@
 
 // VIẾT CODE Ở ĐÂY
 
+#include <stdio.h>
+
+int main() {
+    int n, i;
+    int arr[100];
+    int sum = 0, count = 0;
+    float tb;
+
+    printf("Nhập số phần tử n: ");
+    scanf("%d", &n);
+
+    // nhập mảng
+    for(i = 0; i < n; i++){
+        printf("arr[%d] = ", i);
+        scanf("%d", &arr[i]);
+    }
+
+    // tính tổng các số chia hết cho 3
+    for(i = 0; i < n; i++){
+        if(arr[i] % 3 == 0){
+            sum += arr[i];
+            count++;
+        }
+    }
+
+    // tính trung bình
+    if(count > 0){
+        tb = (float)sum / count;
+        printf("Trung bình các số chia hết cho 3 là: %.2f", tb);
+    }else{
+        printf("Không có số nào chia hết cho 3");
+    }
+
+    return 0;
+}
